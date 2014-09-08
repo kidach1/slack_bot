@@ -1,18 +1,18 @@
-module SlackBot::Concerns::Notify
-  extend ActiveSupport::Concern
+module SlackBot
+  class Notify < ActiveRecord::Base
 
-  module ClassMethods
-    def notify2slack
-      text="【#{Rails.env}】error occured at conversion_report_worker"
+    def self.execute
+      text="【#{Rails.env}】#{::SlackBot.error_message}"
       username='slackbot'
 
-      query = {token: ::Slackbot.slack_token, channel: ::Slackbot.slack_channel,
+      query = {token: ::SlackBot.slack_token, channel: ::SlackBot.slack_channel,
                text: text, username: username}
-      uri = Addressable::URI.parse(::Slackbot.slack_endpoint)
+      uri = Addressable::URI.parse(::SlackBot.slack_endpoint)
       uri.query_values ||= {}
       uri.query_values = uri.query_values.merge(query)
 
       Net::HTTP.get(URI.parse(uri))
     end
+
   end
 end
