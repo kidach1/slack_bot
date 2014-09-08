@@ -7,16 +7,17 @@ require "slack_bot/version"
 Gem::Specification.new do |s|
   s.name        = "slack_bot"
   s.version     = SlackBot::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of SlackBot."
-  s.description = "TODO: Description of SlackBot."
+  s.authors     = ["kidachi_"]
+  s.email       = ["t.daiki50@gmail.com"]
+  s.homepage    = ""
+  s.summary     = "SlackBot."
+  s.description = "SlackBot."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
 
   s.add_dependency "rails", "~> 4.1.4"
+  s.add_dependency "addressable", '~> 2.3.6'
 
   s.add_development_dependency "sqlite3"
 end
