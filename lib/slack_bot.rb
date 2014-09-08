@@ -3,17 +3,17 @@ require "addressable/uri"
 
 module SlackBot
   # your private slack token
-  mattr_accessor :slack_token do
-    'xoxp-2330834784-2332373530-2509000185-97b5a6'
+  mattr_accessor :token do
+    '<your_slack_api_token>'
   end
 
   # your private slack channel
-  mattr_accessor :slack_channel do
-    '#pf-error'
+  mattr_accessor :channel do
+    '<your_slack_channel>'
   end
 
   # sandbox slack endpoint
-  mattr_accessor :slack_endpoint do
+  mattr_accessor :endpoint do
     'https://slack.com/api/chat.postMessage'
   end
 
