@@ -21,6 +21,10 @@ module SlackBot
     'error occured at test'
   end
 
+  def self.setup
+    yield self if block_given?
+  end
+
   def self.notify
     Notify.execute
   end
