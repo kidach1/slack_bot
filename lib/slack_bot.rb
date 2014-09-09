@@ -9,7 +9,7 @@ module SlackBot
 
   # your private slack channel
   mattr_accessor :channel do
-    '<YOUR_SLACK_CHANNEL>'
+    '<YOUR_SLACK_CHANNEL_OR_GROUP>'
   end
 
   # sandbox slack endpoint

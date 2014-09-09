@@ -5,7 +5,7 @@ module SlackBot
       query = {
           token: ::SlackBot.token,
           channel: ::SlackBot.channel,
-          text: "[#{Rails.env}] #{::SlackBot.body}",
+          text: ::SlackBot.body,
           username: ::SlackBot.bot_name
       }
       uri = Addressable::URI.parse(::SlackBot.endpoint)
