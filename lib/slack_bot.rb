@@ -17,8 +17,12 @@ module SlackBot
     'https://slack.com/api/chat.postMessage'
   end
 
-  mattr_accessor :default_error_message, :custom_error_message do
+  mattr_accessor :error_message do
     'error occured at test'
+  end
+
+  mattr_accessor :bot_name do
+    'SlackBot'
   end
 
   def self.setup
