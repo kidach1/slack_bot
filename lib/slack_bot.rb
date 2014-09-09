@@ -4,12 +4,12 @@ require "addressable/uri"
 module SlackBot
   # your private slack token
   mattr_accessor :token do
-    '<your_slack_api_token>'
+    '<YOUR_SLACK_API_TOKEN>'
   end
 
   # your private slack channel
   mattr_accessor :channel do
-    '<your_slack_channel>'
+    '<YOUR_SLACK_CHANNEL>'
   end
 
   # sandbox slack endpoint
@@ -17,7 +17,7 @@ module SlackBot
     'https://slack.com/api/chat.postMessage'
   end
 
-  mattr_accessor :error_message do
+  mattr_accessor :default_error_message, :custom_error_message do
     'error occured at test'
   end
 
