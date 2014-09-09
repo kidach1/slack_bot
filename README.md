@@ -6,7 +6,15 @@ This gem make slackbot notify to you easily.
 
 ## Initial settings
 
-### generate API token
+### Installation
+
+Add this to your Gemfile and run the bundle command.
+
+```
+gem 'slack_bot'
+```
+
+### Generate API token
 
 Get API token form [here](https://api.slack.com/#auth)
 
