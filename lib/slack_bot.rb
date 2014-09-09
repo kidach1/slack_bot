@@ -17,7 +17,7 @@ module SlackBot
     'https://slack.com/api/chat.postMessage'
   end
 
-  mattr_accessor :error_message do
+  mattr_accessor :body do
     'error occured at test'
   end
 
