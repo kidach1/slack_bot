@@ -4,6 +4,8 @@
 
 This gem make slackbot notify to you easily.
 
+* japanese is [here](http://qiita.com/kidachi_/items/debfd0474d0888e5b1f1).
+
 ## Initial settings
 
 ### Installation
@@ -25,14 +27,14 @@ You should only click `Create token`.
 
 ### Set your app config
 
-`config/initializers/slack_api.rb.`
+`config/initializers/slack_bot.rb.`
 
 ```ruby
 SlackBot.setup do |config|
   config.token = <YOUR_API_TOKEN>
   config.channel = <YOUR_CHANNEL_OR_GROUPE_NAME>
   config.bot_name = <BOT_NAME>
-  config.message = <DEFAULT_MESSAGE>
+  config.body = <DEFAULT_MESSAGE>
 end
 ```
 
@@ -49,7 +51,7 @@ That's all!
 
 ## Sample
 
-`config/initializers/slack_api.rb`
+`config/initializers/slack_bot.rb`
 
 ```ruby
 SlackBot.setup do |config|
