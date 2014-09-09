@@ -67,7 +67,7 @@ SlackBot.notify
 
 ### Result
 
-<img src="https://qiita-image-store.s3.amazonaws.com/0/48274/f6045631-594e-3962-f452-45fb82824349.png" width="640" />
+<img src="https://qiita-image-store.s3.amazonaws.com/0/48274/79649019-b72a-7283-4a34-9702aec69d73.png" width="640" />
 
 
 ## Custom
