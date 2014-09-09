@@ -14,6 +14,9 @@ You should only click `Create token`.
 
 ![Slack_API___Slack.png](https://qiita-image-store.s3.amazonaws.com/0/48274/9dad2e26-2171-3a74-1a02-102ae49d1890.png "Slack_API___Slack.png")
 
+
+### Set your app config
+
 `config/initializers/slack_api.rb.`
 
 ```ruby
