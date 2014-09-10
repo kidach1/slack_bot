@@ -74,17 +74,24 @@ SlackBot.notify
 
 ## Custom
 
-If you wanna change parameters you can choose from body, bot_name, channel by context,
+If you wanna change parameters you can choose from `body`, `bot_name`, `channel` by context,
 
 ```ruby
-SlackBot.notify(body: 'Custom body!', bot_name: 'CustomBot', channel: 'custom-channel')
+SlackBot.notify(
+  body: 'Custom body!',
+  bot_name: 'CustomBot',
+  channel: 'custom-channel'
+)
 ```
 
 ## Custom Sample
 
 ```ruby
 #Call me anywhere
-SlackBot.notify(body: "[#{Rails.env}] Custom body!", bot_name: "CustomBot")
+SlackBot.notify(
+  body: "[#{Rails.env}] Custom body!", 
+  bot_name: "CustomBot"
+)
 ```
 
 ### Result
