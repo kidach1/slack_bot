@@ -1,12 +1,12 @@
 module SlackBot
   class Notify < ActiveRecord::Base
 
-    def self.execute
+    def self.execute(body, bot_name, channel)
       query = {
           token: ::SlackBot.token,
-          channel: ::SlackBot.channel,
-          text: ::SlackBot.body,
-          username: ::SlackBot.bot_name
+          channel: channel,
+          text: body,
+          username: bot_name
       }
       uri = Addressable::URI.parse(::SlackBot.endpoint)
       uri.query_values ||= {}

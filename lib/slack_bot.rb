@@ -29,7 +29,7 @@ module SlackBot
     yield self if block_given?
   end
 
-  def self.notify
-    Notify.execute
+  def self.notify(body: SlackBot.body, bot_name: SlackBot.bot_name, channel: SlackBot.channel)
+    Notify.execute(body, bot_name, channel)
   end
 end
