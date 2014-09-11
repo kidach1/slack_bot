@@ -1,5 +1,7 @@
 # SlackBot
 
+[![Code Climate](https://codeclimate.com/github/kidach1/slack_bot/badges/gpa.svg)](https://codeclimate.com/github/kidach1/slack_bot)
+
 ## What's this?
 
 This gem make slackbot notify to you easily.
