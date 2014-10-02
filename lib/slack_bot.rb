@@ -25,6 +25,10 @@ module SlackBot
     'SlackBot'
   end
 
+  mattr_accessor :unactive do
+    false
+  end
+
   def self.setup
     yield self if block_given?
   end
