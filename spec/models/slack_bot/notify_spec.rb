@@ -18,4 +18,10 @@ module SlackBot
     # This case will be passed if you complete settings.
     # it { expect(subject).to eq(true) }
   end
+
+  describe 'unactive mode' do
+    before { SlackBot.unactive = true}
+    subject { SlackBot.notify }
+    it { expect(subject).to eq('SlackBot is unactive mode.') }
+  end
 end

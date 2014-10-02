@@ -2,6 +2,7 @@ module SlackBot
   class Notify < ActiveRecord::Base
 
     def self.execute(body, bot_name, channel)
+      return 'SlackBot is unactive mode.' if SlackBot.unactive
       query = {
           token: ::SlackBot.token,
           channel: channel,
