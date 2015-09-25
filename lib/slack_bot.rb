@@ -1,5 +1,6 @@
 require "slack_bot/engine"
 require "addressable/uri"
+require "net/http"
 
 module SlackBot
   # your private slack token
