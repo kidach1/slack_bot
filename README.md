@@ -20,7 +20,7 @@ gem 'slack_bot'
 
 ### Generate API token
 
-Get API token form [here](https://api.slack.com/#auth)
+Get API token from [here](https://api.slack.com/web)
 
 You should only click `Create token`.
 
