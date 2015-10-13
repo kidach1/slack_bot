@@ -1,13 +1,14 @@
 module SlackBot
   class Notify < ActiveRecord::Base
 
-    def self.execute(body, bot_name, channel)
+    def self.execute(body, bot_name, channel, icon_url)
       return 'SlackBot is unactive mode.' if SlackBot.unactive
       query = {
           token: ::SlackBot.token,
           channel: channel,
           text: body,
-          username: bot_name
+          username: bot_name,
+          icon_url: icon_url
       }
       uri = Addressable::URI.parse(::SlackBot.endpoint)
       uri.query_values ||= {}

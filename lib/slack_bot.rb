@@ -18,6 +18,10 @@ module SlackBot
     'https://slack.com/api/chat.postMessage'
   end
 
+  mattr_accessor :icon_url do
+    'https://qiita-image-store.s3.amazonaws.com/0/48274/9dbacfb2-4a39-4a2c-b8f1-e252bcb12a4e.png'
+  end
+
   mattr_accessor :body do
     'error occured at test'
   end
@@ -34,7 +38,8 @@ module SlackBot
     yield self if block_given?
   end
 
-  def self.notify(body: SlackBot.body, bot_name: SlackBot.bot_name, channel: SlackBot.channel)
-    Notify.execute(body, bot_name, channel)
+  def self.notify(body: SlackBot.body, bot_name: SlackBot.bot_name,
+    channel: SlackBot.channel, icon_url: SlackBot.icon_url)
+    Notify.execute(body, bot_name, channel, icon_url)
   end
 end
